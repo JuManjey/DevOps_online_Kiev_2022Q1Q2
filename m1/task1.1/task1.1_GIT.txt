@@ -1,0 +1,22 @@
+3934ac7 HEAD@{0}: checkout: moving from images to main
+b23b3cf HEAD@{1}: checkout: moving from develop to images
+3934ac7 HEAD@{2}: checkout: moving from main to develop
+3934ac7 HEAD@{3}: merge develop: Fast-forward
+d2c8a30 HEAD@{4}: checkout: moving from images to main
+b23b3cf HEAD@{5}: checkout: moving from develop to images
+3934ac7 HEAD@{6}: commit: Initial
+a1e6df5 HEAD@{7}: commit: Initial
+b23b3cf HEAD@{8}: commit: Initial
+c73556d HEAD@{9}: commit: Initial
+d2c8a30 HEAD@{10}: checkout: moving from main to develop
+d2c8a30 HEAD@{11}: commit: Initial
+37c19d4 HEAD@{12}: commit: asd
+31caeeb HEAD@{13}: commit: Something
+28c1ba9 HEAD@{14}: commit: Intital
+4de27ef HEAD@{15}: commit: Initial commit
+4841d73 HEAD@{16}: commit: Initial commit
+f80e8a8 HEAD@{17}: checkout: moving from main to main
+f80e8a8 HEAD@{18}: commit: main
+fc3cb99 HEAD@{19}: commit: main
+2efd6f0 HEAD@{20}: commit: 123
+9a4f66f HEAD@{21}: clone: from https://github.com/JuManjey/DevOps_online_Kiev_2022Q1Q2.git
