@@ -1,0 +1,22 @@
+162  VBoxManage --help
+  163  VBoxManage list
+  164  VBoxManage list -l
+  165  VBoxManage list vms
+  166  tldr VBoxManage
+  167  tldr --update
+  168  VBoxManage --help | less
+  169  VBoxManage controlvm restart "X_Clean"
+  170  VBoxManage controlvm restart X_Clean
+  171  VBoxManage controlvm X_Clean restart
+  172  VBoxManage controlvm --help
+  173  VBoxManage controlvm X_Clean reset
+  174  VBoxManage controlvm X_Clean status
+  175  VBoxManage exportvm --help
+  176  VBoxManage exportvm --help | less
+  177  VBoxManage exportvm --help less
+  178  VBoxManage export --help less
+  179  VBoxManage export X_Clean
+  180  VBoxManage export X_Clean --output exported_X_Clean.ova
+  181  VBoxManage controlvm X_Clean shutdown
+  182  VBoxManage controlvm X_Clean poweroff
+  183  VBoxManage export X_Clean --output exported_X_Clean.ova
