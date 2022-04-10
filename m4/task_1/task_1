@@ -107,9 +107,73 @@ mv symlink_lab symb_lnk_labwork2_file
 hardlink - ссылка на область памяти в которой храниться файл. Работоспособность не теряется
 symlink - ссылка на файл. После удаления файла - неработоспособна, так как ссылается на файл, а не на область памяти.
 
+locate squid
+/etc/webmin/squid
+/etc/webmin/squid/config
+/usr/share/vim/vim81/syntax/squid.vim
+/usr/share/webmin/authentic-theme/images/modules/squid
+/usr/share/webmin/authentic-theme/images/modules/squid/acl.gif
+/usr/share/webmin/authentic-theme/images/modules/squid/admin.gif
+/usr/share/webmin/authentic-theme/images/modules/squid/auth.gif
+/usr/share/webmin/authentic-theme/images/modules/squid/authparam.gif
 
+locate squid
+/root/.tldr/tldr/pages/common/traceroute.md
+/root/.tldr/tldr/pages/linux/tcptraceroute.md
+/usr/src/linux-hwe-5.11-headers-5.11.0-40/tools/testing/selftests/net/traceroute.sh
+/usr/src/linux-hwe-5.13-headers-5.13.0-35/tools/testing/selftests/net/traceroute.sh
+/usr/src/linux-hwe-5.13-headers-5.13.0-39/tools/testing/selftests/net/traceroute.sh
 
+mount -ls
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,relatime)
+udev on /dev type devtmpfs (rw,nosuid,noexec,relatime,size=65874432k,nr_inodes=16468608,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=13182312k,mode=755,inode64)
+/dev/md2 on / type ext4 (rw,relatime)
 
+find /etc -name '*host*'
+/etc/hosts.allow
+/etc/hosts
+/etc/X11/Xsession.d/35x11-common_xhost-local
+/etc/X11/Xsession.d/60x11-common_localhost
+/etc/host.conf
+/etc/hosts.deny
+/etc/hostname
+/etc/ssh/ssh_host_ecdsa_key.pub
+/etc/ssh/ssh_host_ed25519_key
+/etc/ssh/ssh_host_ed25519_key.pub
+/etc/ssh/ssh_host_ecdsa_key
+/etc/ssh/ssh_host_dsa_key
+/etc/ssh/ssh_host_rsa_key
+/etc/ssh/ssh_host_rsa_key.pub
+/etc/ssh/ssh_host_dsa_key.pub
+/etc/ghostscript
+/etc/ansible/hosts
+
+find /etc -name '*ss*'
+/etc/passwd
+/etc/rc2.d/S01ssh
+/etc/alsa/conf.d/50-oss.conf
+/etc/ufw/applications.d/openssh-server
+/etc/fonts/conf.avail/49-sansserif.conf
+/etc/fonts/conf.d/49-sansserif.conf
+/etc/systemd/user/sockets.target.wants/gpg-agent-ssh.socket
+/etc/systemd/system/timers.target.wants/phpsessionclean.timer
+/etc/systemd/system/multi-user.target.wants/ssh.service
+/etc/systemd/system/sshd.service
+...
+
+ls -la /etc/ | grep 'ss'  
+drwxr-xr-x   3 root root    4096 May 23  2020 gss
+drwxr-xr-x   2 root root    4096 Nov  5 15:20 guest-session
+-rw-r--r--   1 root root      26 Feb 17 01:44 issue
+-rw-r--r--   1 root root      19 Feb 17 01:44 issue.net
+-rw-r--r--   1 root root     510 Apr 23  2020 nsswitch.conf
+-rw-r--r--   1 root root    1672 Apr 10 08:17 passwd
+-rw-r--r--   1 root root    1664 Mar  6 17:29 passwd-
+drwxr-xr-x   4 root root    4096 Mar  6 17:25 ssh
+drwxr-xr-x   4 root root    4096 Mar 16 08:30 ssl
 
 
 
