@@ -2,6 +2,63 @@ cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 имя пользователя:пароль(в /etc/shadow):идентификатор пользователя:идентификатор группы:доп.инфа пользователя(finger):home folder:оболочка
 
+cat /etc/group
+docker:x:998:root
+имя группы:пароль (/etc/shadow):идентификатор группы:пользователи входящие в группу
+
+cat /etc/shadow 
+Псевдопользователи - пользователи без права входа в систему.
+* - вместо пароля
+sys:*:18375:0:99999:7:::
+sync:*:18375:0:99999:7:::
+games:*:18375:0:99999:7:::
+man:*:18375:0:99999:7:::
+lp:*:18375:0:99999:7:::
+mail:*:18375:0:99999:7:::
+news:*:18375:0:99999:7:::
+uucp:*:18375:0:99999:7:::
+
+UID - идентификатор пользователя
+0 - 1000 - системные пользователи
+1000 - ... добавленные с помощью useradd/adduser
+
+cat /etc/group
+docker:x:998:root
+имя группы:пароль (/etc/shadow):идентификатор группы:пользователи входящие в группу
+
+groups root
+root : root docker
+
+useradd/adduser
+adduser {{username}} - добавление пользователя
+adduser --home {{path/to/home}} {{username}} - добавление пользователя с указанием домашней папки
+...
+
+usermod --login new_name_of_user name_of_user
+
+ls -la /etc/skel/ - используется для создания домашнего каталога при первом создании пользователя
+total 32
+drwxr-xr-x   3 root root 4096 Mar  6 17:29 .
+drwxr-xr-x 117 root root 4096 Apr 10 12:15 ..
+-rw-r--r--   1 root root  220 Feb 25  2020 .bash_logout
+-rw-r--r--   1 root root 3771 Feb 25  2020 .bashrc
+-rw-r--r--   1 root root    0 May 23  2020 .cloud-locale-test.skip
+drwxr-xr-x   4 root root 4096 Mar  6 17:29 .config
+-rw-r--r--   1 root root  807 Feb 25  2020 .profile
+-rw-r--r--   1 root root 1600 Apr  9  2020 .Xdefaults
+-rw-r--r--   1 root root   14 Apr  9  2020 .xscreensaver
+
+deluser --remove-all-files {{username}}
+
+passwd --lock {{username}}
+passwd --unlock {{username}}
+
+
+
+
+
+
+
 
 
 
