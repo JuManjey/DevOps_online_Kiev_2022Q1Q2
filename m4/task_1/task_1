@@ -1,3 +1,4 @@
+Task1.Part1
 clear
 passwd root
 history 
@@ -6,17 +7,66 @@ cat /etc/psswd
 cat /etc/passwd
 history 
 getent passwd
+root:x:0:0:root:/root:/bin/bash
+имя пользователя:пароль(в /etc/shadow):идентификатор пользователя:идентификатор группы:доп.инфа пользователя(finger):home folder:оболочка
+chfn -f "ROOT-USER" root
+history 
+apt-get install tldr
+tldr --help
+tldr -h
+tldr cat
+cat {{file}}
+nano {{path/to/file}}
+nano .bashrc
+cat --help
+history 
+finger
+root@Ubuntu-2004-focal-64-minimal-hwe ~ # finger
+Login     Name        Tty      Idle  Login Time   Office     Office Phone
+root      ROOT-USER   pts/0          Apr 10 06:53 (89.252.21.37)
+finger {{username}}
+finger -s  Display the user's login name, real name, terminal name, and other information
+finger -l
+root@Ubuntu-2004-focal-64-minimal-hwe ~ # finger -l
+Login: root                             Name: ROOT-USER
+Directory: /root                        Shell: /bin/bash
+On since Sun Apr 10 06:53 (CEST) on pts/0 from 89.252.21.37
+No mail.
+No Plan.
+ls -la /home/
 
+Task1.Part2
+tree -P '*c' --prune
+...
+ src
+        │       ├── backup.cc
+        │       ├── database.cc
+        │       ├── node_sqlite3.cc
+        │       └── statement.cc
+        └── typescript
+            └── bin
+                └── tsc
+...
 
+ tree -P '*.sh' --prune
+│       ├── snapshot.sh
+│       ├── status.sh
+│       ├── telegram-bot.sh
+│       ├── update.sh
+│       ├── wait-ready.sh
+│       └── watch.sh
+└── start-server-script
+    └── install.sh
 
-
-
-
-
-
-
-
-
+tree -P '*home*' --matchdirs --prune
+.
+└── ironfish
+    └── node_modules
+        └── os-homedir
+            ├── index.js
+            ├── license
+            ├── package.json
+            └── readme.md
 
 
 
