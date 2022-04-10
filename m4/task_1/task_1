@@ -175,6 +175,19 @@ drwxr-xr-x   2 root root    4096 Nov  5 15:20 guest-session
 drwxr-xr-x   4 root root    4096 Mar  6 17:25 ssh
 drwxr-xr-x   4 root root    4096 Mar 16 08:30 ssl
 
+lshw
+hwinfo
+lsblk
+df -h
+
+
+
+
+
+
+
+
+
 
 
 
