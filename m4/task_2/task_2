@@ -53,11 +53,17 @@ deluser --remove-all-files {{username}}
 passwd --lock {{username}}
 passwd --unlock {{username}}
 
+passwd --delete {{username}} && passwd --expire {{username}}
 
+ls -l
+drwxr-xr-x 15 root root 4096 Apr 10 06:48 ironfish
+права доступа:кол-во ссылок:владелец:группа:размер:дата изменения:имя
 
-
-
-
+|d|rwx|r-x|r-x|
+d -directory
+rwx - чтение, запись, исполнение для владельца файла
+r-x - чтение, без возможности записи, но с возможностью исполнения для участников группы владельца файла
+r-x - чтение, без возможности записи, но с возможностью исполнения для всех остальных
 
 
 
