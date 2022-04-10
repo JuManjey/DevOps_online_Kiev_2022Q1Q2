@@ -98,6 +98,15 @@ mkdir test
 cp .bash_history /home/bash_history_copy
 cat /home/bash_history_copy
 
+ln labwork2 hard_link
+ln -s labwork2 symlink_lab
+cat symlink_lab
+
+mv hard_link hard_lnk_labwork2
+mv symlink_lab symb_lnk_labwork2_file
+hardlink - ссылка на область памяти в которой храниться файл. Работоспособность не теряется
+symlink - ссылка на файл. После удаления файла - неработоспособна, так как ссылается на файл, а не на область памяти.
+
 
 
 
