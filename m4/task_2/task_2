@@ -77,8 +77,13 @@ umask - изменение прав доступа (чтение/запись/и
 umask -S
 u=rwx,g=rx,o=rx
 
+drwxr-xr-x (0755) - .cargo
+7 - read, write, execute
+5 - read, no write, execute
+5 - 5 - read, no write, execute
 
-
+ch +x some_name_of_script.sh
++x - разрешить исполнение
 
 
 
