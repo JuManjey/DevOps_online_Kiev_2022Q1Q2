@@ -67,8 +67,19 @@ tree -P '*home*' --matchdirs --prune
             ├── license
             ├── package.json
             └── readme.md
+            
+cd $HOME
+pwd
+cd /etc/group
+cd /etc/ssh/ssh_config.d/
+/etc/ssh/ssh_config.d
+cd $HOME
+pwd
+/root
 
-
+ls -a Показать файлы и папки + скрытые файлы
+ls -l показать файлы и папки без скрытых + доп.инфа
+ls -la - Показать файлы и папки + скрытые файлы + доп.инфа
 
 
 
