@@ -81,6 +81,22 @@ ls -a Показать файлы и папки + скрытые файлы
 ls -l показать файлы и папки без скрытых + доп.инфа
 ls -la - Показать файлы и папки + скрытые файлы + доп.инфа
 
+mkdir /root/subdirectory
+ls -la >> touch list_home
+toudch list_dir
+touch list_dir
+ls -la >> list_dir
+cat list_dir 
+
+cp list_dir /home/
+ls -la
+rm -r subdirectory
+ls -la
+rm /home/list_dir
+
+mkdir test
+cp .bash_history /home/bash_history_copy
+cat /home/bash_history_copy
 
 
 
