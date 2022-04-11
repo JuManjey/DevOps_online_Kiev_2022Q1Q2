@@ -78,13 +78,21 @@ top -Hp {{process_id}}
 top -p $(pgrep -d ',' {{process_name}})
 
 
+-20 - высший приоритет
+19 - низший приоритет
+1 - 99 - default
+100 - 139 - предназначены для пользовательского пространства
+renice -n  -12  -p 1055
+renice -n -2  -u apache
 
+kill {{process_id}}
+kill %{{job_id}}
+kill -{{1|HUP}} {{process_id}}
+kill -{{17|STOP}} {{process_id}}
+kill -{{SIGUSR1}} -{{group_id}}
 
-
-
-
-
-
+fg %{{job_id}}
+bg %{{job_id}}
 
 
 
