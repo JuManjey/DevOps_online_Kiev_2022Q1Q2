@@ -1,0 +1,96 @@
+Running or Runnable (R) - процесс в состоянии исполнения
+Uninterruptible Sleep (D) - ожидание ресурсов для выполнения. реакции на сигналы отсутствуют
+Interruptable Sleep (S) - ожидание ресурсов + реагирует на сигналы
+Stopped (T) - остановленный процесс
+Zombie (Z) - процесс в состоянии завершения.(корневой процесс выполняет завершение процесса-child).
+
+proc - содержит подробную информацию о системе
+
+lscpu
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Byte Order:                      Little Endian
+Address sizes:                   39 bits physical, 48 bits virtual
+CPU(s):                          16
+On-line CPU(s) list:             0-15
+Thread(s) per core:              2
+Core(s) per socket:              8
+Socket(s):                       1
+NUMA node(s):                    1
+Vendor ID:                       GenuineIntel
+CPU family:                      6
+Model:                           158
+Model name:                      Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz
+Stepping:                        13
+CPU MHz:                         4282.688
+CPU max MHz:                     5000.0000
+CPU min MHz:                     800.0000
+BogoMIPS:                        7200.00
+Virtualization:                  VT-x
+L1d cache:                       256 KiB
+L1i cache:                       256 KiB
+L2 cache:                        2 MiB
+...
+
+ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0 170492 12592 ?        Ss   Apr02   3:40 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    Apr02   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   Apr02   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   Apr02   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   Apr02   0:00 [kworker/0:0H-events_highpri]
+root           9  0.0  0.0      0     0 ?        I<   Apr02   0:00 [mm_percpu_wq]
+root          10  0.0  0.0      0     0 ?        S    Apr02   0:00 [rcu_tasks_rude_]
+root          11  0.0  0.0      0     0 ?        S    Apr02   0:00 [rcu_tasks_trace]
+...
+
+ps aux | grep {{username}}
+ 
+ps --ppid=2 --pid=2 - процессы ядра
+pstree 2 - процессы ядра
+
+ps -N --ppid=2 --pid=2 - пользовательские процессы
+pstree
+
+ps aux
+root           1  0.0  0.0 170492 12592 ?        Ss   Apr02   3:40 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    Apr02   0:00 [kthreadd] = Interruptable Sleep (S) - ожидание ресурсов + реагирует на сигналы
+root           3  0.0  0.0      0     0 ?        I<   Apr02   0:00 [rcu_gp] - процесс бездействует
+root           4  0.0  0.0      0     0 ?        I<   Apr02   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   Apr02   0:00 [kworker/0:0H-events_highpri]
+root           9  0.0  0.0      0     0 ?        I<   Apr02   0:00 [mm_percpu_wq]
+root          10  0.0  0.0      0     0 ?        S    Apr02   0:00 [rcu_tasks_rude_] 
+root          11  0.0  0.0      0     0 ?        S    Apr02   0:00 [rcu_tasks_trace]
+root          12  0.0  0.0      0     0 ?        S    Apr02   0:00 [ksoftirqd/0]
+root          13  0.0  0.0      0     0 ?        I    Apr02   1:08 [rcu_sched]
+root          14  0.0  0.0      0     0 ?        S    Apr02   0:01 [migration/0]
+root          15  0.0  0.0      0     0 ?        S    Apr02   0:00 [idle_inject/0]
+
+ps aux | grep {{username}}
+ps --user $(id -u) f
+
+top - динамическое отображение информации о текущих процессах в реальном времени
+htop
+
+top -u {{username}}
+top -o {{field_name}}
+top -Hp {{process_id}}
+top -p $(pgrep -d ',' {{process_name}})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
