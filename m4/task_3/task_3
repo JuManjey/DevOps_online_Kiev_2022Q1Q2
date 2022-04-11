@@ -94,9 +94,12 @@ kill -{{SIGUSR1}} -{{group_id}}
 fg %{{job_id}}
 bg %{{job_id}}
 
+basic security for ssh
+использовать ключи ssh-key
+изменить порт 22
+устнановить ufw+fail2ban на сервер
 
-
-
+ssh -i {{path/to/key_file}} {{username}}@{{remote_host}}
 
 
 
