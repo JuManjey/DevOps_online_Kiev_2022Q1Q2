@@ -5,7 +5,7 @@ from emoji import emojize
 import demoji
 import re
 import pickle
-
+import platform
 
 def date_time():
     print(datetime.now());
@@ -82,4 +82,12 @@ def  emoji_converter2():
         outcome += emojis.get(word, word) + " "
      print(outcome)
 
+def pc_icnfo():
+    import platform
+    print(platform.machine())
+    print(platform.version())
+    print(platform.platform())
+    print(platform.uname())
+    print(platform.system())
+    print(platform.processor())
 
