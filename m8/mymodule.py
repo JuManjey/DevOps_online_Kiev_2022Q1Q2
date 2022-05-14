@@ -1,6 +1,10 @@
 from cgi import print_arguments
 from datetime import date
 from datetime import datetime
+from emoji import emojize
+import demoji
+import re
+import pickle
 
 
 def date_time():
@@ -30,7 +34,6 @@ def read_test_file():
     
     
 def read_html_title():
-    
     file = open('index.html','r')
     massive = []
     substr = "title"
@@ -44,11 +47,39 @@ def read_html_title():
     for x in massive:
         print(x)
     
-        
-        
-        
-        
     
-    
-    
-    
+def emoji_converter():
+    import emoji
+    import re
+    str1 = "he was, confused, and but, I smile after, sleeping"
+    opt = re.sub(r'[^\w\s]','', str1)
+    massive = opt.split();
+    for i in range (len(massive)):
+        RE_EMOJI = re.compile('[\U00010000-\U0010ffff]', flags=re.UNICODE)
+        emoj_str = RE_EMOJI.sub(r'', massive[i])
+        print(emoj_str)
+        if (emoji.emojize(massive[i], language='alias')):
+            print(":"+(emoji.emojize(massive[i], language='alias')+":"))
+        else:
+            print(massive[i])
+            
+def  emoji_converter2():
+     import emoji
+     import re
+     message = 'he was happy and lol I smile mermaid sleeping'
+     
+     words = message.split( " ")
+     emojis = {
+        ":)" : "😀",
+        ":(" : "😞",
+        "lol" : "😂",
+        "sick":"😨",
+        "happy": "😀",
+        "mermaid": "🧜‍"
+     }
+     outcome = " "
+     for word in words:
+        outcome += emojis.get(word, word) + " "
+     print(outcome)
+
+
