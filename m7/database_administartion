@@ -1,1 +1,88 @@
-start
+CREATE TABLE Client (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+INSERT INTO Client VALUES (1, 'Alfreds', 'Futterkiste', 'Obere Str. 57', 'kiev');
+INSERT INTO Client VALUES (2, 'Maria ', 'Anders', 'Avda. de la Constitución 2222', 'México');
+INSERT INTO Client VALUES (3, 'Around', 'Horn', '120 Hanover Sq.', 'London');
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| classicmodels      |
+| epamdb             |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use epamdb
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables
+    -> ;
++------------------+
+| Tables_in_epamdb |
++------------------+
+| Client           |
+| human            |
+| movie            |
+| tasks            |
++------------------+
+4 rows in set (0.00 sec)
+
+SELECT * FROM Customers WHERE customerNumber=103;
+
+ERROR 1146 (42S02): Table 'classicmodels.Customers' doesn't exist
+mysql> SELECT * FROM customers WHERE customerNumber=103; 
++----------------+-------------------+-----------------+------------------+------------+----------------+--------------+--------+-------+------------+---------+------------------------+-------------+
+| customerNumber | customerName      | contactLastName | contactFirstName | phone      | addressLine1   | addressLine2 | city   | state | postalCode | country | salesRepEmployeeNumber | creditLimit |
++----------------+-------------------+-----------------+------------------+------------+----------------+--------------+--------+-------+------------+---------+------------------------+-------------+
+|            103 | Atelier graphique | Schmitt         | Carine           | 40.32.2555 | 54, rue Royale | NULL         | Nantes | NULL  | 44000      | France  |                   1370 |    21000.00 |
++----------------+-------------------+-----------------+------------------+------------+----------------+--------------+--------+-------+------------+---------+------------------------+-------------+
+1 row in set (0.00 sec)
+
+ SELECT customerNumber from customers where customerNumber>150 group by customerNumber;
+ +----------------+
+| customerNumber |
++----------------+
+|            151 |
+|            157 |
+|            161 |
+|            166 |
+|            167 |
+|            168 |
+|            169 |
+|            171 |
+|            172 |
+|            173 |
+|            175 |
+|            177 |
+|            181 |
+|            186 |
+|            187 |
+|            189 |
+|            198 |
+|            201 |
+|            202 |
+
+mysql> CREATE USER 'user'@'%' IDENTIFIED BY 'EPAM_2022_DevOps';
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> GRANT ALL PRIVILEGES ON * . * TO 'user'@'%';
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.02 sec)
+
+
+
