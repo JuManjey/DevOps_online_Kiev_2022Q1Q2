@@ -84,5 +84,18 @@ Query OK, 0 rows affected (0.03 sec)
 mysql> FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0.02 sec)
 
+ mysqldump --user root --password --all-databases > EPAM_DEVOPS_2022.sql
+ mysqldump --user root --password --all-databases < EPAM_DEVOPS_2022.sql
+
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+sudo apt update
+sudo apt-get install gnupg
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sudo apt-get install -y mongodb-org=5.0.2 mongodb-org-database=5.0.2 mongodb-org-server=5.0.2 mongodb-org-shell=5.0.2 mongodb-org-mongos=5.0.2 mongodb-org-tools=5.0.2
+sudo systemctl start mongod
+systemctl status mongod
+
 
 
