@@ -75,5 +75,14 @@ mysql> SELECT * FROM customers WHERE customerNumber=103;
 |            201 |
 |            202 |
 
+mysql> CREATE USER 'user'@'%' IDENTIFIED BY 'EPAM_2022_DevOps';
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> GRANT ALL PRIVILEGES ON * . * TO 'user'@'%';
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.02 sec)
+
 
 
